@@ -22,14 +22,30 @@ namespace Jogo_Xadrez_Console
             Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
             Console.WriteLine();
 
-            if (partida.xeque)
+            if(!partida.terminada)
+            {
+                if (partida.xeque)
+                {
+                    ConsoleColor aux = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("XEQUE!!");
+                    Console.WriteLine();
+                    Console.ForegroundColor = aux;
+                }
+            }
+            else
             {
                 ConsoleColor aux = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("XEQUE!!");
+                Console.WriteLine("XEQUEMATE!!");
                 Console.WriteLine();
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Vencedor: " + partida.jogadorAtual);
                 Console.ForegroundColor = aux;
             }
+                
+            
                 
 
         }

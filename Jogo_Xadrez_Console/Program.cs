@@ -52,6 +52,9 @@ namespace Jogo_Xadrez_Console
                         
                 }
 
+                Console.Clear();
+                Tela.imprimirPartida(partida);
+
             } catch(TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
