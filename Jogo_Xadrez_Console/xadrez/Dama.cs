@@ -34,7 +34,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha - 1;
+                pos.definirValores(pos.linha - 1, pos.coluna - 1);
             }
 
             // abaixo a esquerda
@@ -47,7 +47,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha - 1;
+                pos.definirValores(pos.linha + 1, pos.coluna - 1);
             }
 
 
@@ -61,7 +61,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha + 1;
+                pos.definirValores(pos.linha - 1, pos.coluna + 1);
             }
 
             // abaixo a direita
@@ -74,7 +74,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.coluna = pos.coluna + 1;
+                pos.definirValores(pos.linha - 1, pos.coluna + 1);
             }
 
             // acima
@@ -87,7 +87,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha - 1;
+                pos.definirValores(pos.linha - 1, pos.coluna);
             }
 
 
@@ -101,7 +101,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha + 1;
+                pos.definirValores(pos.linha + 1, pos.coluna);
             }
 
             // direita
@@ -114,7 +114,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.coluna = pos.coluna + 1;
+                pos.definirValores(pos.linha, pos.coluna + 1);
             }
 
             // esquerda
@@ -127,7 +127,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.coluna = pos.coluna - 1;
+                pos.definirValores(pos.linha, pos.coluna - 1);
             }
 
             return mat;

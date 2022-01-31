@@ -34,7 +34,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha - 1;
+                pos.definirValores(pos.linha - 1, pos.coluna - 1);
             }
 
             // abaixo a esquerda
@@ -47,7 +47,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha - 1;
+                pos.definirValores(pos.linha + 1, pos.coluna - 1);
             }
 
 
@@ -61,11 +61,11 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.linha = pos.linha + 1;
+                pos.definirValores(pos.linha - 1, pos.coluna + 1);
             }
 
             // abaixo a direita
-            pos.definirValores(posicao.linha - 1, posicao.coluna + 1);
+            pos.definirValores(posicao.linha + 1, posicao.coluna + 1);
 
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -74,7 +74,7 @@ namespace xadrez
                 if (tab.peca(pos) != null && tab.peca(pos).cor != cor)
                     break;
 
-                pos.coluna = pos.coluna + 1;
+                pos.definirValores(pos.linha + 1, pos.coluna + 1);
             }
 
 
